@@ -1,0 +1,9 @@
+[2025-10-02 08:44:36] - Inicio del programa
+[2025-10-02 08:44:36] - Ejecutando tarea...
+[2025-10-02 08:44:41] - Tarea completada
+[2025-10-02 08:44:52] - Inicio del programa
+[2025-10-02 08:44:52] - Ejecutando tarea...
+[2025-10-02 08:44:57] - Tarea completada
+[2025-10-02 09:13:11] - Inicio del programa
+[2025-10-02 09:13:11] - Ejecutando tarea...
+[2025-10-02 09:13:16] - Tarea completada
