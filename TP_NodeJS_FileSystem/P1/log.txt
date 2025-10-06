@@ -7,3 +7,9 @@
 [2025-10-02 09:13:11] - Inicio del programa
 [2025-10-02 09:13:11] - Ejecutando tarea...
 [2025-10-02 09:13:16] - Tarea completada
+[2025-10-05 15:26:19] - Inicio del programa
+[2025-10-05 15:26:19] - Ejecutando tarea...
+[2025-10-05 15:26:24] - Tarea completada
+[2025-10-05 15:27:12] - Inicio del programa
+[2025-10-05 15:27:12] - Ejecutando tarea...
+[2025-10-05 15:27:17] - Tarea completada

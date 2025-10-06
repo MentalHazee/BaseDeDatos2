@@ -3,7 +3,7 @@
 // Con él podemos leer, escribir, crear, modificar y borrar archivos y directorios.
 // Al usar 'fs.promises', todas las funciones devuelven Promises y podemos usar 'async/await'.
 
-const fs = require("fs").promises;
+const fs = require("node:fs").promises;
 
 // Función para obtener la fecha y hora actual en formato [YYYY-MM-DD HH:MM:SS]
 function getDateTime() {
