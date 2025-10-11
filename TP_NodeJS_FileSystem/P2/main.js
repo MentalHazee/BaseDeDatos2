@@ -44,6 +44,7 @@ async function main() {
                 console.error("Error al eliminar el archivo: ", err);
             }
         }, 10000);
+        
     } catch (err) {
         console.log("Ocurrió un error: ", err);
     }
