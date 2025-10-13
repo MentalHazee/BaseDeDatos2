@@ -39,7 +39,7 @@
         console.log(_dirname);
         app.get("/front", (req, res) => {
             res.status(200).sendFile(path.join(_dirname, "prueba.html"));
-        }
+        });
         const middleware =(req, res, next) => {
           console.log(`${req.method} ${req.url}`);
           next();
