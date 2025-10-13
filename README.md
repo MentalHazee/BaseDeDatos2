@@ -44,7 +44,7 @@
         app.listen(3000, () => {
           console.log("Servidor ejecutando en la línea 3000");
         });
-        app.get("/:id", (req, res) => {
+        app.get("/user/:id", (req, res) => {
             console.log(`Usando el id por parametro ${req.params.id}`);
             res.status(200).send("User: ", req.params.id); //res.status(200).send(`User: ${req.params.id}`);
         });
