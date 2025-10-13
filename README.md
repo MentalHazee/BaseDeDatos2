@@ -33,14 +33,19 @@
       index.js:
         import express from "express";
         export const app = express();
-        const middlwere =(req, res, next) => {
+        const middleware =(req, res, next) => {
           console.log(`${req.method} ${req.url}`);
           next();
         };
-        app.get("/", () => (req, res) => {
-          res.status(200).send("hola mundo");
+        app.get("/", middleware, (req, res) => {
+            console.log("dentro del get");
+            res.status(200).send("hola mundo");
         });   
         app.listen(3000, () => {
           console.log("Servidor ejecutando en la línea 3000");
+        });
+        app.get("/:id", (req, res) => {
+            console.log(`Usando el id por parametro ${req.params.id}`);
+            res.status(200).send("User: ", req.params.id); //res.status(200).send(`User: ${req.params.id}`);
         });
 
