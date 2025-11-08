@@ -1,3 +1,7 @@
+// ------------------------------
+//  index.js - Punto de entrada de la aplicación
+// ------------------------------
+
 import app from "./app.js";
 
 const PORT = process.env.PORT || 3000;
