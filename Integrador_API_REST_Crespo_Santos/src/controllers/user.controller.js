@@ -17,15 +17,12 @@ export const registrarUsuario = async (req, res) => {
     if (usuarioExistente) {
       return res.status(400).json({ success: false, message: "El email ya está registrado" });
     }
-
-    // Hashear contraseña
-    const hashedPassword = await bcrypt.hash(password, 10);
-
+    
     // Crear nuevo usuario
     const nuevoUsuario = new User({
       nombre,
       email,
-      password: hashedPassword,
+      password: password,
       rol: rol || "cliente",
     });
 
