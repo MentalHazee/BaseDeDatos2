@@ -4,7 +4,8 @@ import Resena from "../models/review.model.js";
 // Listar productos con su categoría
 export const obtenerProductos = async (req, res, next) => {
   try {
-    const productos = await Producto.find().populate("categoria");
+    const productos = await Producto.find();
+    await Producto.populate(productos, { path: "categoria"});
     res.json({ success: true, data: productos });
   } catch (err) { next(err); }
 };

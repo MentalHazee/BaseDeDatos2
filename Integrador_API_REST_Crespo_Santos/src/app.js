@@ -16,7 +16,7 @@ import cartRoutes from "./routes/cart.routes.js";
 import orderRoutes from "./routes/order.routes.js";
 // Si más adelante agregás reseñas o categorías, las importás igual:
 // import reviewRoutes from "./routes/review.routes.js";
-// import categoryRoutes from "./routes/category.routes.js";
+import categoryRoutes from "./routes/category.routes.js";
 
 // Inicialización
 dotenv.config();
@@ -42,7 +42,7 @@ app.use("/api/productos", productRoutes);
 app.use("/api/carrito", cartRoutes);
 app.use("/api/ordenes", orderRoutes);
 // app.use("/api/resenas", reviewRoutes);
-// app.use("/api/categorias", categoryRoutes);
+app.use("/api/categorias", categoryRoutes);
 
 // ------------------------------
 //  Middleware Global de Errores
