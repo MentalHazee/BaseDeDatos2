@@ -5,9 +5,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// -----------------------------
-// Registrar usuario
-// -----------------------------
 export const registrarUsuario = async (req, res) => {
   try {
     const { nombre, email, password} = req.body;
@@ -38,9 +35,6 @@ export const registrarUsuario = async (req, res) => {
   }
 };
 
-// -----------------------------
-// Login de usuario
-// -----------------------------
 export const loginUsuario = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -75,9 +69,7 @@ export const loginUsuario = async (req, res) => {
   }
 };
 
-// -----------------------------
-// Obtener perfil del usuario autenticado
-// -----------------------------
+
 export const obtenerPerfil = async (req, res) => {
   try {
     const usuario = await User.findById(req.user.id).select("-password");
@@ -87,9 +79,6 @@ export const obtenerPerfil = async (req, res) => {
   }
 };
 
-// -----------------------------
-// Obtener todos los usuarios (solo admin)
-// -----------------------------
 export const obtenerUsuarios = async (req, res) => {
   try {
     const usuarios = await User.find().select("-password");
@@ -99,9 +88,6 @@ export const obtenerUsuarios = async (req, res) => {
   }
 };
 
-// -----------------------------
-// Eliminar usuario (solo admin)
-// -----------------------------
 export const eliminarUsuario = async (req, res) => {
   try {
     const { id } = req.params;

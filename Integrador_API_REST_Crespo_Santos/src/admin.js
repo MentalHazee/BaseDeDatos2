@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bcrypt from "bcryptjs";
-import User from "./models/user.model.js";
+import User from "./models/admin.model.js";
 
 dotenv.config();
 
@@ -10,9 +10,9 @@ dotenv.config();
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI);
-        console.log('--- 💾 Conectado a MongoDB para crear Administrador ---');
+        console.log('--- Conectado a MongoDB para crear Administrador ---');
     } catch (err) {
-        console.error(`❌ Error de conexión: ${err.message}`);
+        console.error(` Error de conexión: ${err.message}`);
         process.exit(1);
     }
 };
@@ -28,7 +28,7 @@ const crearAdminUser = async () => {
         const adminExists = await User.findOne({ email: emailAdmin });
 
         if (adminExists) {
-            console.log(`✅ Usuario Administrador (${emailAdmin}) ya existe.`);
+            console.log(` Usuario Administrador (${emailAdmin}) ya existe.`);
             mongoose.disconnect();
             return;
         }
@@ -42,10 +42,10 @@ const crearAdminUser = async () => {
 
         await usuarioAdmin.save();
 
-        console.log(`✨ Usuario Administrador (${emailAdmin}) creado exitosamente.`);
+        console.log(` Usuario Administrador (${emailAdmin}) creado exitosamente.`);
         
     } catch (error) {
-        console.error(`❌ Error al crear usuario admin: ${error.message}`);
+        console.error(` Error al crear usuario admin: ${error.message}`);
     } finally {
         // 4. Desconectar Mongoose después de la siembra
         mongoose.disconnect();
